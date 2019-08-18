@@ -1,0 +1,15 @@
+;;; custom-config --- My own preloaded config
+
+;;; Commentary:
+
+;;; Some config for preloading my Emacs
+
+;;; Code:
+
+;;; Unfortunately for some reason I was getting a cryptic error when downloading
+;;; packages.  It was a TLS verification problem with Mac OS X and GnuTLS or WHATEVER.
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+
+;;; Please use the right Alt as AltGr so I can write Spanish stuff.
+(when (eq system-type 'darwin)
+  (setq mac-right-option-modifier 'none))
