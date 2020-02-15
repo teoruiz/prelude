@@ -13,3 +13,10 @@
 ;;; Please use the right Alt as AltGr so I can write Spanish stuff.
 (when (eq system-type 'darwin)
   (setq mac-right-option-modifier 'none))
+
+;; Let's set that beautiful theme
+
+;;(setq prelude-theme 'sanityinc-tomorrow-night)
+(setq prelude-theme 'sanityinc-tomorrow-day)
+
+(set-face-attribute 'default nil :height 130)
