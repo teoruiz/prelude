@@ -16,7 +16,7 @@
 
 ;; Let's set that beautiful theme
 
-;;(setq prelude-theme 'sanityinc-tomorrow-night)
-(setq prelude-theme 'sanityinc-tomorrow-day)
+(setq prelude-theme 'sanityinc-tomorrow-night)
+;;(setq prelude-theme 'sanityinc-tomorrow-day)
 
 (set-face-attribute 'default nil :height 130)
