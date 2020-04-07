@@ -56,6 +56,14 @@ See URL `http://pypi.python.org/pypi/pyflakes'."
 (setq elpy-rpc-timeout 10000) ;; Black can take some time to run
 (setq elpy-remove-modeline-lighter t)
 
+(advice-add 'elpy-modules-remove-modeline-lighter
+            :around (lambda (fun &rest args)
+                      (unless (eq (car args) 'flymake-mode)
+                        (apply fun args))))
+
+(add-hook 'elpy-mode-hook (lambda ()
+                            (add-hook 'before-save-hook
+                                      'elpy-black-fix-code nil t)))
 ;; Multiple cursors
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
