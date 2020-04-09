@@ -64,6 +64,10 @@ See URL `http://pypi.python.org/pypi/pyflakes'."
 (add-hook 'elpy-mode-hook (lambda ()
                             (add-hook 'before-save-hook
                                       'elpy-black-fix-code nil t)))
+
+;; Magit
+(setq magit-diff-refine-hunk (quote all))
+
 ;; Multiple cursors
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
