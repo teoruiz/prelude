@@ -20,3 +20,8 @@
 ;;(setq prelude-theme 'sanityinc-tomorrow-day)
 
 (set-face-attribute 'default nil :height 130)
+
+;;; Freaking disable global-nlinum-mode
+(setq prelude-minimalistic-ui t)
+;; (global-nlinum-mode -1)
+(global-display-line-numbers-mode 1)

@@ -8,7 +8,7 @@
 
 
 ;; Please, show me my numbers
-(global-display-line-numbers-mode)
+;; (global-display-line-numbers-mode)
 
 ;; Disable the ugly color change for line-tail of whitespace-style
 (setq whitespace-style '(face tabs empty trailing))
@@ -17,6 +17,10 @@
 ;; Some truncate and long line preferences
 (setq truncate-lines t)
 (setq visual-line-mode t)
+
+;; Speed up long lines
+(setq bidi-paragraph-direction 'left-to-right)
+(setq bidi-inhibit-bpa t)
 
 ;; Keyboard and keybindings
 
